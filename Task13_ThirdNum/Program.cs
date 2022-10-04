@@ -5,6 +5,15 @@
 
 Console.Write("Введите число: ");
 string value = Console.ReadLine();
+
+// Для корректной работы с отрицательными значениями
+int checkValue = int.Parse(value);
+if (checkValue < 0)
+{
+    value = value.Remove(0, 1);
+}
+
+// Вывод третьей цифры
 int valueLen = value.Length;
 if (valueLen >= 3)
 {
