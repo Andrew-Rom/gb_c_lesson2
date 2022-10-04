@@ -6,10 +6,10 @@ Console.Write("Введите трехзначное число: ");
 string valueStr = Console.ReadLine();
 int valueNum = int.Parse(valueStr);
 
-if (valueNum > 99 && valueNum < 1000) //Условие работы только с трехзначными числами
+if ((valueNum > 99 && valueNum < 1000) || (valueNum < -99 && valueNum > -1000)) //Условие работы только с трехзначными числами
 {
     int secondNum = (valueNum % 100) / 10;
-    Console.WriteLine("Вторая цифра этого числа: " + secondNum);
+    Console.WriteLine("Вторая цифра этого числа: " + Math.Abs(secondNum));
 }
 else
 {
